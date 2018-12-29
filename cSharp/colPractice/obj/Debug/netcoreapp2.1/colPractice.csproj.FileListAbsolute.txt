@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/bin/Debug/netcoreapp2.1/colPractice.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/bin/Debug/netcoreapp2.1/colPractice.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/bin/Debug/netcoreapp2.1/colPractice.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/bin/Debug/netcoreapp2.1/colPractice.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/bin/Debug/netcoreapp2.1/colPractice.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/colPractice/obj/Debug/netcoreapp2.1/colPractice.pdb

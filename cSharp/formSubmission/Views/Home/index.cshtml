@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>Friends.Com</h1>
+    @model User
+    <form method="post" action="/process">
+        <div class="form-group">
+            <label asp-for="firstName"></label>
+            <span asp-validation-for="firstName"></span>
+            <input type="text" class="form-control" placeholder="First Name" asp-for="firstName">
+            <label asp-for="lastName"></label>
+            <span asp-validation-for="lastName"></span>
+            <input type="text" class="form-control" placeholder="Last Name" asp-for="lastName">
+
+            <label asp-for="age"></label>
+            <span asp-validation-for="age"></span>
+            <input type="number" class="form-control" placeholder="Age" asp-for="age">
+
+            <label asp-for="email"></label>
+            <span asp-validation-for="email"></span>
+            <input type="email" class="form-control" placeholder="Email" asp-for="email">
+
+            <label  asp-for="password"></label>
+            <span asp-validation-for="password"></span>
+            <input type="password" class="form-control" placeholder="Password" asp-for="password">
+
+        </div>
+        <button type="submit" class="btn btn-primary">Add quote</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Friends.com</title>
+</head>
+
+<body>
+    <h1>Friends.com</h1>
+    {% with messages = get_flashed_messages(category_filter=["register"]) %}
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color:green; text-align: center;">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <img id="logo" src="{{url_for('static', filename='images/logo1.png')}}" alt='guerrilla'>
+    <form id="form2" class="form-signin" action="/login" method="post">
+        <h2 class="h3 mb-3 font-weight-normal">Login</h2>
+        <div id="margin2">
+            {% with messages = get_flashed_messages(category_filter=["erroremail2"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="text" id="inputName9" class="form-control" placeholder="Email" name="email2" value="{{session['email2']}}">
+            {% with messages = get_flashed_messages(category_filter=["errorpassword2"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="password" id="inputName8" class="form-control" placeholder="Password" name="password2">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    </form>
+
+
+
+    <form id="form1" class="form-signin" action="/create_friend" method="post">
+        <h2 class="h3 mb-3 font-weight-normal">Register</h2>
+        <div id="margin">
+            {% with messages = get_flashed_messages(category_filter=["erroremail"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="text" id="inputName4" class="form-control" placeholder="Email" name="email" value="{{session['email']}}">
+            {% with messages = get_flashed_messages(category_filter=["errorfirst_name"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="text" id="inputName1" class="form-control" placeholder="First Name" name="first_name" value="{{session['first_name']}}">
+            {% with messages = get_flashed_messages(category_filter=["errorlast_name"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="text" id="inputName2" class="form-control" placeholder="Last Name" name="last_name" value="{{session['last_name']}}">
+            {% with messages = get_flashed_messages(category_filter=["errorpassword"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input class="forminputs" type="password" id="inputName3" class="form-control" placeholder="Password" name="password">
+            <input class="forminputs" type="password" id="inputName5" class="form-control" placeholder="Confirm Password"
+                name="confirm_password">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
+    </form>
+</body>
+
+</html>

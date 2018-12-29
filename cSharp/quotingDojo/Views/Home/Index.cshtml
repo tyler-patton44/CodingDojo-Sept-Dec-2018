@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>Quote This</h1>
+    @model Quotes
+    <form action="/quotes" method="post">
+        <img src="~/images/logo1.png" alt="guerilla">
+        <div class="form-group">
+            <label asp-for="name"></label>
+            <span asp-validation-for="name"></span>
+            <input type="text" class="form-control" placeholder="Name" asp-for="name">
+        </div>
+        <div class="form-group">
+            <label asp-for="content"></label>
+            <span asp-validation-for="content"></span>
+            <textarea class="form-control" placeholder="Your Quote..." asp-for="content" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add quote</button>
+        <a class="btn btn-primary" href="/quotes">View all quotes</a>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #3C6478;
+}
+h1{
+    padding: 5px 0 5px 15px;
+    color: white;
+    background-color: #8DA6B3;
+    box-shadow: .5px .5px 18px rgba(0, 0, 0, 0.5);
+}
+h2{
+    text-align: center;
+    color: white;
+}
+#box{
+    background-color: #3C6478;
+    height: 350px;
+    width: 45%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+}
+.table td{
+    vertical-align: middle;
+}
+.table tr:nth-child(even){
+    background-color: rgba(208,208,208, 0.2);
+}
+.btn-primary{
+    margin-top: 50px;
+}
+#form1{
+    width: 50%;
+    margin: 0 auto;
+}
+#form1 #logo{
+    margin-left: 42%;
+}
+#form1 h1{
+    text-align: center;
+}

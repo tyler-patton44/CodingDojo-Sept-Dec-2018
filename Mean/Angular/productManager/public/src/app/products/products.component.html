@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="card mb-4 shadow-sm" *ngFor = "let t of tasks">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{t.title}}</h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title">${{t.price}}</h1>
+            <img *ngIf = "t.image.length > 0" src="{{t.image}}" alt="product" style="width: 50%; height: 100px; margin-bottom: 15px;">
+            <button [routerLink]="['/products/edit/'+t._id]" class="btn btn-lg btn-block btn-outline-primary">Edit</button>
+            <button (click) = onDelete(t) class="btn btn-lg btn-block btn-outline-primary delete">Delete</button>
+        </div>
+    </div>
+</div>

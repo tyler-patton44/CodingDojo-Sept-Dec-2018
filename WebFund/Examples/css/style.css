@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+  position: absolute; 
+ }
+ #header{
+  width: 98%;
+  height: 25%;
+  margin: 1% 1%;
+  background-color: green;
+ }
+ #navigation{
+  height: 45%;
+  width: 23%;
+  margin-left: 1%;
+  background-color: blue;
+  display: inline-block;
+ }
+ #main_content{
+  width: 73%;
+  height: 69%;
+  margin-left: 26%;
+  background-color: red;
+  position: absolute;
+ }
+ .subcontents{
+  height: 45%;
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 2%; 
+  background-color: yellow;
+  display: inline-block;
+ }
+ #advertisement{
+  height: 25%;
+  width: 96%;
+  margin-top: 3%;
+  margin-left: 2%;
+  background-color: purple;
+ }

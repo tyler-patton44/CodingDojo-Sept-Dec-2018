@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Friends.com</title>
+    <style>
+h1{
+    padding: 5px 0 5px 15px;
+    color: white;
+    background-color: #3C6478;
+    box-shadow: .5px .5px 18px rgba(0, 0, 0, 0.5);
+}
+#logo{
+    margin:0 auto;
+    display: block;
+}
+a{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+}
+a:hover{
+    text-decoration: none;
+    color: #3C6478;
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Friends.com</h1>
+    <img id="logo" src="{{url_for('static', filename='images/logo1.png')}}" alt='guerrilla'>
+    <a href="/">Login and Registration</a>
+    
+</body>
+
+</html>

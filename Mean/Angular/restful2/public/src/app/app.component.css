@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+button{
+    display: block;
+    background-color: rgba(0,150,255,1);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+}
+.delete{
+    background-color: firebrick;
+}
+.delete:hover{
+    background-color: rgba(178,34,34,0.8);
+}
+button:hover{
+    background-color: rgba(0,150,255,0.8);
+}
+h2,p{
+    text-align: center;
+}
+.top{
+    display: inline-block;
+    width: 40%;
+}
+.forms{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-left: 5%;
+}
+form{
+    display: block;
+    width: 100%;
+}
+form input{
+    width: 80%;
+}
+form input{
+    width: 100%;
+}
+.form2{
+    margin-top: 25px;
+}

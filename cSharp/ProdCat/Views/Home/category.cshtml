@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <header>
+    <h1>TyDye Market</h1>
+    </header>
+    <nav>
+            <a href="/">Products</a>
+            <p> | </p>
+            <a href="/categories">Categories</a>
+    </nav>
+    @model categories
+    <div class="container">
+        <form action="createCategory" method="post">
+            <h2>Add Category</h2>
+            <div class="form-group">
+                <label asp-for="name"></label>
+                <span asp-validation-for="name"></span>
+                <input type="text" class="form-control" placeholder="Product Name" asp-for="name">
+            </div>
+            <button type="submit" class="btn btn-primary">Add category</button>
+        </form>
+        <div id="divider"></div>  
+        <ul class="list-group">
+            <h2>Existing Categories</h1>
+            <div class="scroll-box">
+            @foreach(var cat in ViewBag.Categories){
+            <li class="list-group-item"><a href="/showCat/@cat.categoryId">@cat.name</a></li>
+            }
+            </div>
+        </ul> 
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/bin/Debug/netcoreapp2.1/boxing.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/bin/Debug/netcoreapp2.1/boxing.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/bin/Debug/netcoreapp2.1/boxing.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/bin/Debug/netcoreapp2.1/boxing.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/bin/Debug/netcoreapp2.1/boxing.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/boxing/obj/Debug/netcoreapp2.1/boxing.pdb

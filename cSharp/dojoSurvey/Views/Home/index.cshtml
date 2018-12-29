@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>Tylers Survey</h1>
+    @model User
+    <form method="post" action="/process">
+        <div class="form-group">
+            <label asp-for="fullName"></label>
+            <span asp-validation-for="fullName"></span>
+            <input type="text" class="form-control" placeholder="Name" asp-for="fullName">
+
+            <label asp-for="location"></label>
+            <span asp-validation-for="location"></span>
+            <select class="form-control" id="exampleFormControlSelect1" asp-for="location">
+                <option>Tulsa</option>
+                <option>Seattle</option>
+                <option>San Francisco</option>
+                <option>Boulder</option>
+                <option>Dallas</option>
+            </select>
+            
+            <label asp-for="language"></label>
+            <span asp-validation-for="language"></span>
+            <select class="form-control" id="exampleFormControlSelect1" asp-for="language">
+                <option>Python</option>
+                <option>C#</option>
+                <option>Mean</option>
+                <option>Java</option>
+                <option>C++</option>
+            </select>
+
+            <label asp-for="comment"></label>
+            <span asp-validation-for="comment"></span>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="comment"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

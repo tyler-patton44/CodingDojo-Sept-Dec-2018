@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Creation Center</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'courseMaker/style.css' %}">
+
+</head>
+
+<body>
+    <form id="form1" class="form-signin" action="/add" method="post">
+        {% csrf_token %}
+        <img id="logo" src="{% static 'courseMaker/images/logo1.png' %}" alt='guerrilla'>
+        <h1 class="h3 mb-3 font-weight-normal">Add a new course</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="text" id="inputName" class="form-control" placeholder="Name" name="name" value="{{request.session.name}}">
+
+        <textarea name='desc' placeholder="Description..">{{request.session.desc}}</textarea>
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+    </form>
+    <h1 class="course">Courses:</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Created At</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for info in courses %}
+                <tr>
+                    <td>{{info.id}}</td>
+                    <td><a class="userStuff">{{info.name}}</a></td>
+                    <td>{{info.desc}}</td>
+                    <td>{{info.created_at}}</td>
+                    <td><a href="/danger/{{info.id}}">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+
+</html>

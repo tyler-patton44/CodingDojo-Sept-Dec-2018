@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    display: block;
+    margin-top: 200px;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.main-content{
+    margin-left: 40%;
+}
+#bottom{
+    margin-left: 5%;
+}

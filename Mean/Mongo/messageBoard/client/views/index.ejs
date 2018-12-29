@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Tydye</h1>
+    </nav>
+    <% JSON.stringify(messages) %> 
+    <form class="shadow-sm" action="formInfo" method="POST">
+        <h2>Post</h2>
+        <div class="form-group">
+                <% if(messages.name) { %>
+                    <% for (var x of messages.name) { %>
+                        <h6><%= x %></h6>
+                    <% } %>
+                <% } %>
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Name" name="name">
+            <small id="emailHelp" class="form-text text-muted">Your name must be atleast 2 characters.</small>
+        </div>
+        <div class="form-group">
+                <% if(messages.content) { %>
+                    <% for (var x of messages.content) { %>
+                        <h6><%= x %></h6>
+                    <% } %>
+                <% } %>
+            <label for="content">Quote:</label>
+            <textarea type="text" class="form-control" placeholder="Enter Post" name="content" row='3'></textarea>
+            <small id="emailHelp" class="form-text text-muted">Your post must be atleast 1 character.</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+            <h2 class="border-bottom border-gray pb-2 mb-0">Posts:</h2>
+    
+            <% for(var x in mes) {%>
+                <div class="media text-muted pt-3">
+                    <img src="/images/funnyUnknown.jpg" alt="" class="mr-2 rounded">
+                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                    <strong class="d-block text-gray-dark"><%= mes[x].name %></strong>
+                    <%= mes[x].content %>
+                    <p><%= moment(mes[x].createdAt).format('h:mm a MMMM Do YYYY')%></p>
+                    </p>
+                </div>
+                <div class="comments">
+                    <h4>Comments</h4>
+                    <% for(var c=0; c < mes[x].comments.length; c++) {%>
+                        <div class="media text-muted pt-3">
+                            <img src="/images/funnyUnknown.jpg" alt="" class="mr-2 rounded">
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"><%= mes[x].comments[c].Comname %></strong>
+                            <%= mes[x].comments[c].Comcontent %>
+                            <p><%= moment(mes[x].comments[c].createdAt).format('h:mm a MMMM Do YYYY')%></p>
+                            </p>
+                        </div>
+                    <% } %>
+                </div>
+                <form class="shadow-sm second" action="/createCom/<%= mes[x]._id %>" method="POST">
+                    <div class="form-group">
+                            <% if(messages.Comname) { %>
+                                <% for (var x of messages.Comname) { %>
+                                    <h6><%= x %></h6>
+                                <% } %>
+                            <% } %>
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter Name" name="Comname">
+                    </div>
+                    <div class="form-group">
+                            <% if(messages.Comcontent) { %>
+                                <% for (var x of messages.Comcontent) { %>
+                                    <h6><%= x %></h6>
+                                <% } %>
+                            <% } %>
+                        <label for="content">Comment:</label>
+                        <textarea type="text" class="form-control" placeholder="Enter Comment" name="Comcontent" row='3'></textarea>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary">Comment</button>
+                </form>
+            <% } %>
+        </div>
+</body>
+</html>

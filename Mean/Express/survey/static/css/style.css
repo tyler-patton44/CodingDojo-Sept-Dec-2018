@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    padding: 12px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+form{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+form h2{
+    text-align: center;
+}
+.table{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.info{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+.info p{
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.card.mb-4.shadow-sm{
+    display: inline-block;
+    width: 30%;
+}
+.card.mb-4.shadow-sm .btn.delete{
+    border: 1px solid rgba(250,0,0,1);
+    color: rgba(250,0,0,1);
+}
+.card.mb-4.shadow-sm .btn.delete:hover{
+    background-color: rgba(250,0,0,1);
+    color: white;
+}

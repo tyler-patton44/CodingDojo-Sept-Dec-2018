@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'word_app/style.css' %}">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Random Word Generator</h1>
+    <h3>{{request.session.word}}</h3>
+    <form action="/random_w" method="GET">
+        {% csrf_token %}
+        <input type="submit" name="add-2" value="Generate">
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    background-color: #3C6478;
+}
+#form1{
+    width: 45%;
+    margin: 0 auto;
+}
+#logo{
+    margin-left: 38%;
+}
+h1.h3{
+    text-align: center;
+    color: white;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+}

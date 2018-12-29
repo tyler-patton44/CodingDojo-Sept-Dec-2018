@@ -1,0 +1,11 @@
+<div *ngIf = 'data'>
+    <h1>{{data.name}}</h1>
+    <img src="http://tulsahistory.org/wp/wp-content/uploads/2010/01/Tulsa-skyline.jpg" alt="tulsa">
+    <div class="list-group">
+        <li class="list-group-item list-group-item-action">HUMIDITY: {{data.main.humidity}}</li>
+        <li class="list-group-item list-group-item-action">TEMPERATURE(AVG): {{data.main.temp}} °F </li>
+        <li class="list-group-item list-group-item-action">TEMPERATURE(LOW): {{data.main.temp_min}} °F</li>
+        <li class="list-group-item list-group-item-action">TEMPERATURE(HIGH): {{data.main.temp_max}} °F</li>
+        <li class="list-group-item list-group-item-action">STATUS: {{data.weather[0].description}}</li>
+    </div>
+</div>

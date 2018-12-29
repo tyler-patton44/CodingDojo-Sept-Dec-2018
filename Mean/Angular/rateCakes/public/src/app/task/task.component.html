@@ -1,0 +1,11 @@
+<div>
+    <h1>{{tasktoShow.baker}}'s Cake</h1>
+    <p>{{tasktoShow.average}} star average</p>
+    <img src="{{tasktoShow.image}}" alt="cake">
+</div>
+<div>
+    <ul *ngFor = 'let c of tasktoShow.comments'>
+        <li>{{c.ratings}} stars</li>
+        <li>{{c.comment}}</li>
+    </ul>
+</div>

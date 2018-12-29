@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Wall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style2.css')}}">
+</head>
+
+<body>
+    <header>
+        <h1>Friends.com</h1>
+        <h3> Welcome {{session['userid'][0]['first_name']}} {{session['userid'][0]['last_name']}}</h3>
+        <a href="/">Logout</a>
+    </header>
+    {% with messages = get_flashed_messages(category_filter=["hacker"]) %}
+    {% if messages %}
+    {% for message in messages %}
+    <p style="color:red; text-align: center; font-size: 30px;">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div id="container">
+        <div class="left-side">
+            
+            <p class="top">Messages(s) for {{session['userid'][0]['first_name']}}</p>
+            {% for recieved in messagesrecieved %}
+            <p>{{recieved['sender']}}:</p>
+            <p style="display:inline-block;">{{recieved['message']}}</p>
+            <a  style="display:inline-block;" href="/delete_message/{{recieved['id']}}">Delete</a>
+            {% endfor %}
+        </div>
+        
+        <div class="right-side">
+            <p class="top">Send a message</p>
+            {% for users in allusers %}
+            <p>Send messge to {{users['first_name']}}</p>
+            <form class="form-signin" action="/create_message" method="post">
+                {% with messages = get_flashed_messages(category_filter=["errortexta"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <p style="color:red;">{{message}}</p>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <input type="hidden" name="hidden" value="{{users['id']}}">
+                <textarea placeholder="Send a message" name="texta" style="width:100%; height:75px;"></textarea>
+            
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+            </form>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>

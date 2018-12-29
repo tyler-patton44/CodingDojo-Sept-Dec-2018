@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div style="text-align:center">
+  <ul class="nav">
+    <h1>World Weather Services</h1>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/district of columbia']">DC</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/chicago']">Chicago</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']">Tulsa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/san jose']">San Jose</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/seattle']">Seattle</a>
+    </li>
+  </ul>
+<router-outlet></router-outlet>

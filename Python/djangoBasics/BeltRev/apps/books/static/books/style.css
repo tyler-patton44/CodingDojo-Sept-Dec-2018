@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+strong{
+    color: white;
+    font-size: 20px;
+}
+.actions{
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: 1px solid blue;
+}
+.actions:hover{
+  color: white;
+}
+.rating {
+  width: 226px;
+  margin: 0 auto 1em;
+  font-size: 45px;
+  overflow:hidden;
+}
+  
+  [class*="stars"] {
+    background-color:red;
+    text-indent:-9999px;
+    height: 15px;
+    display: inline-block;  
+    background: url('http://www.itsalif.info/blogfiles/rating/star-rating.png') no-repeat;
+    width: 60px;
+    position: relative;
+  }
+  [class*="stars"][data-stars="5.0"] {
+    background-position: 0 0;
+  }
+  [class*="stars"][data-stars="4.5"] {
+    background-position: 0 -16px;
+  }
+  [class*="stars"][data-stars="4.0"] {
+    background-position: -12px 0;
+  }
+  [class*="stars"][data-stars="3.5"] {
+    background-position: -12px -16px;
+  }
+  [class*="stars"][data-stars="3.0"] {
+    background-position: -24px 0;
+  }
+  [class*="stars"][data-stars="2.5"] {
+    background-position: -24px -16px;
+  }
+  [class*="stars"][data-stars="2.0"] {
+    background-position: -36px 0;
+  }
+  [class*="stars"][data-stars="1.5"] {
+    background-position: -36px -16px;
+  }
+  [class*="stars"][data-stars="1.0"] {
+    background-position: -48px 0;
+  }
+  [class*="stars"][data-stars="0.5"] {
+    background-position: -48px -16px;
+  }
+  [class*="stars"][data-stars="0.0"] {
+    background-position: -60px 0;
+  }
+  [class*="stars"][data-stars="0.0"]:after {
+    content: '(Not Rated)';
+    text-indent: 0;
+    line-height: 0;
+    display: inline-block;
+    width: 200px;
+    font-family: Verdana;
+    font-size: 12px;
+    position: absolute; 
+    top: 8px;
+    left: 65px;
+  }

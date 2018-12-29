@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <title>Website Leads</title>
+</head>
+
+<body>
+    <h1>Report Dashboard</h1>
+    <h2>Clients</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Leads</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(clients|length) %}
+            <tr>
+                <td>{{clients[i]['first_name']}}</td>
+                <td>{{clients[i]['last_name']}}</td>
+                <td>{{clients[i]['leads']|int}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="chartContainer"></div>
+    <script type="text/javascript">window.onload = function () {
+
+            var options = {
+                title: {
+                    text: "Customers and Number of new"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 45,
+                    showInLegend: "true",
+                    legendText: "{label}",
+                    indexLabel: "{label} ({y})",
+                    yValueFormatString: "#,##0.#" % "",
+                    dataPoints: [
+                        {% for lead in clients %}
+                { label: "{{lead['first_name']}} {{lead['last_name']}}", y: {{ lead['leads'] | int }}},
+            {% endfor %}
+            ]
+            }]
+            };
+        $("#chartContainer").CanvasJSChart(options);
+            
+            }</script>
+</body>
+
+</html>

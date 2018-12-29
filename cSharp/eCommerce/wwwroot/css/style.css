@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: block;
+    padding: 12px;
+    background-color: rgba(0,0,0,0.8);
+}
+nav a,h2{
+    display: inline-block;
+    font-size: 28pt;
+    color: white;
+}
+nav h2{
+    margin-right: 10%;
+}
+nav a{
+    margin-top: 12px;
+    font-size: 15pt;
+    margin-left: 20px;
+}
+nav a:hover{
+    color: gold;
+    text-decoration: none;
+}
+div.card.mb-4{
+    display: inline-block;
+    width: 18%;
+}
+ul{
+    list-style-type: none;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+ul h3{
+    border-bottom: 1px solid black;
+}
+
+form{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+form h2{
+    color: black;
+}
+form .btn-primary{
+    width: 100%;
+}
+.table{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.table .thead-dark{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+span{
+    color: red;
+}

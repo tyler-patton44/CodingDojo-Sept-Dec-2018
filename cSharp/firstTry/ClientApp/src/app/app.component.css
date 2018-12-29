@@ -1,0 +1,22 @@
+ul.nav{
+    padding: 15px;
+    background-color: rgba(0,0,0,0.8);
+}
+ul.nav h1{
+    display: inline-block;
+    color: white;
+    text-align: left;
+}
+ul.nav .nav-link{
+    margin-top: 9px;
+    color: white;
+    -webkit-transition: color 1s;
+    transition: color 1s;
+}
+ul.nav .nav-link:hover{
+    color: gold;
+    border-bottom: 1px solid rgba(0,150,255,0.7);
+}
+ul.nav .nav-item:nth-of-type(1){
+    margin-left: 5%;
+}

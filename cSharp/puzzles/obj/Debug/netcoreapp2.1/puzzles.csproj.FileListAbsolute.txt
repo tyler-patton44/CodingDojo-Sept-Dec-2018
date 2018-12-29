@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/bin/Debug/netcoreapp2.1/puzzles.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/bin/Debug/netcoreapp2.1/puzzles.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/bin/Debug/netcoreapp2.1/puzzles.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/bin/Debug/netcoreapp2.1/puzzles.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/bin/Debug/netcoreapp2.1/puzzles.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/puzzles/obj/Debug/netcoreapp2.1/puzzles.pdb

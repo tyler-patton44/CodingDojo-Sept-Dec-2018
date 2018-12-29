@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Tydye survey</h1>
+    <% JSON.stringify(messages) %> 
+    <form action="formInfo" method="POST">
+        <h2>Registration</h2>
+        <div class="form-group">
+                <% if(messages.name) { %>
+                    <% for (var x of messages.name) { %>
+                        <h6><%= x %></h6>
+                    <% } %>
+                <% } %>
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter Name" name="name">
+            <small id="emailHelp" class="form-text text-muted">Your name cannot be less than 2 character.</small>
+        </div>
+        <div class="form-group">
+                <% if(messages.age) { %>
+                    <% for (var x of messages.age) { %>
+                        <h6><%= x %></h6>
+                    <% } %>
+                <% } %>
+            <label for="name">Age:</label>
+            <input type="number" class="form-control" placeholder="Age" name="age">
+            <small id="emailHelp" class="form-text text-muted">Your agee cannot be less than 0 character.</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

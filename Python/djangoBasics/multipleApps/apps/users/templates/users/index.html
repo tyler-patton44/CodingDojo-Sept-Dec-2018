@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Hello Flask</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/style.css' %}">
+</head>
+
+<body>
+    <form id="form1" class="form-signin" action="/result" method="post">
+        {% csrf_token %}
+        <img id="logo" src="{% static 'users/images/logo1.png' %}" alt='guerrilla'>
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label for="inputFirstName" class="sr-only">First Name</label>
+        <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" name="first" value="{{request.session.first}}">
+        <label for="inputLasttName" class="sr-only">Last Name</label>
+        <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" name="last" value="{{request.session.last}}">
+
+
+        <textarea placeholder="Describe Yourself..." name="texta">{{request.session.texta}}</textarea>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

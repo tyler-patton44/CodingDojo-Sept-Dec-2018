@@ -1,0 +1,9 @@
+<h1>{{data.name}}</h1>
+<img src="http://res.cloudinary.com/culturemap-com/image/upload/q_auto/ar_4:3,c_fill,g_faces:center,w_1200/v1508855968/photos/263214_original.jpg" alt="dallas">
+<div class="list-group">
+    <li class="list-group-item list-group-item-action">HUMIDITY: {{data.main.humidity}}</li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(AVG): {{data.main.temp}} °F </li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(LOW): {{data.main.temp_min}} °F</li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(HIGH): {{data.main.temp_max}} °F</li>
+    <li class="list-group-item list-group-item-action">STATUS: {{data.weather[0].description}}</li>
+</div>

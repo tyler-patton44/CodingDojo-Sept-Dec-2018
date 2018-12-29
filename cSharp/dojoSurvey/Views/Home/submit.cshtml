@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+@model dojoSurvey.Models.User
+<body>
+    <h1>Tylers Survey</h1>
+    <h3>Your Info:</h3>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Language</th>
+      <th scope="col">Location</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@Model.fullName</td>
+      <td>@Model.location</td>
+      <td>@Model.language</td>
+      <td>@Model.comment</td>
+    </tr>
+  </tbody>
+</table>
+<a href="/" class="btn btn-primary">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<form (submit) = "onSubmit2()">
+    <h2>Add Quotes</h2>
+    <div class="form-group">
+        <p *ngIf = "error">{{error}}</p>
+        <label for="exampleInputEmail1">Quote:</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Quote" name="newQ.content" [(ngModel)]="newQ.content">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<button [routerLink]="['/quotes/'+data._id]"  class="btn btn-primary">Go back</button>

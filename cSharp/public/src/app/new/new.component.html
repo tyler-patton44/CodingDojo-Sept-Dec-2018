@@ -1,0 +1,9 @@
+<form (submit) = "onSubmit()">
+    <h2>Add Author</h2>
+    <div class="form-group">
+        <p *ngIf = "error">{{error}}</p>
+        <label for="exampleInputEmail1">Author Name:</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="newTask.name" [(ngModel)]="newTask.name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

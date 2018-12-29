@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Hello Flask</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survey_app/style.css' %}">
+</head>
+
+<body>
+    <form id="form1" class="form-signin" action="/result" method="post">
+        {% csrf_token %}
+        <img id="logo" src="{% static 'survey_app/images/logo1.png' %}" alt='guerrilla'>
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="text" id="inputName" class="form-control" placeholder="Name" name="name" value="{{request.session.name}}">
+
+        <label for="exampleFormControlSelect1">Location</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="location">
+            <option>Tulsa</option>
+            <option>Dallas</option>
+            <option>New York</option>
+            <option>Seattle</option>
+            <option>San Francisco</option>
+        </select>
+
+
+        <textarea placeholder="Describe Yourself..." name="texta">{{request.session.texta}}</textarea>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

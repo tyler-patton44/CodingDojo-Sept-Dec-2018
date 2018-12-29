@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    @{
+        var StringList = new List<string>{"Pecan Pie","Apple Pie","Cranberry Pie","Chocolate Cake","Banna Split", "AbraCadbra","Canned o Corn"};
+    }
+    <h1>•••Welcome to Tylers Treat§•••</h1>
+    <ul class="list-group">
+        @foreach(var word in StringList){
+            @if(word.StartsWith("C")){
+                <li class="list-group-item" style="color:red;">@word</li>
+            }
+            else{
+            <li class="list-group-item">@word</li>
+            }
+            
+        }
+    </ul>
+</body>
+</html>

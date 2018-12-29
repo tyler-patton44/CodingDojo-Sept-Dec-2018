@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style2.css"/>
+</head>
+<body>
+    <header>
+    <h1>TyDye Market</h1>
+    <a class="btn btn-primary" href="/">Home</a>
+    </header>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">@ViewBag.Product.name</h1>
+            <p class="lead">@ViewBag.Product.description</p>
+         </div>
+    </div>
+    <ul class="list-group">
+        <h2>Categories</h1>
+        @foreach(var x in ViewBag.prodCat){
+        @foreach(var cat in x.allAssociations){
+            <li class="list-group-item"><a href="/showCat/@cat.category.categoryId">@cat.category.name</a></li>
+        }
+        }
+    </ul>
+        @model associations
+        <form asp-action="createProdAssociation" asp-controller="Home" method="post">
+            <h2>Add Category</h2>
+            <div class="form-group">
+                <label asp-for="categoryId">Category:</label>
+                <span asp-validation-for="categoryId"></span>
+                <select class="form-control" asp-for="categoryId">
+                    @foreach(var x in ViewBag.Categories){
+                        <option value="@x.categoryId">@x.name</option>
+                    }
+                    
+                </select>
+            </div>
+            <input type="hidden" value="@ViewBag.Product.productId" asp-for="productId">
+
+            <button type="submit" class="btn btn-primary">Add category</button>
+        </form>
+
+</body>
+</html>

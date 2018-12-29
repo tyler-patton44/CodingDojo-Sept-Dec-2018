@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/bin/Debug/netcoreapp2.1/phone.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/bin/Debug/netcoreapp2.1/phone.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/bin/Debug/netcoreapp2.1/phone.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/bin/Debug/netcoreapp2.1/phone.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/bin/Debug/netcoreapp2.1/phone.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/phone/obj/Debug/netcoreapp2.1/phone.pdb

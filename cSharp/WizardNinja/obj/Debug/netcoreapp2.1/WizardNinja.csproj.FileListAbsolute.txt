@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/bin/Debug/netcoreapp2.1/WizardNinja.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/bin/Debug/netcoreapp2.1/WizardNinja.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/bin/Debug/netcoreapp2.1/WizardNinja.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/bin/Debug/netcoreapp2.1/WizardNinja.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/bin/Debug/netcoreapp2.1/WizardNinja.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/WizardNinja/obj/Debug/netcoreapp2.1/WizardNinja.pdb

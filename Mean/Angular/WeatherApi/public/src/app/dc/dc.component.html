@@ -1,0 +1,9 @@
+<h1>{{data.name}}</h1>
+<img src="https://kids.nationalgeographic.com/content/dam/kids/photos/States/O-W/washington-dc-capitol.ngsversion.1435610747994.adapt.1900.1.jpg" alt="dc">
+<div class="list-group">
+    <li class="list-group-item list-group-item-action">HUMIDITY: {{data.main.humidity}}</li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(AVG): {{data.main.temp}} °F </li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(LOW): {{data.main.temp_min}} °F</li>
+    <li class="list-group-item list-group-item-action">TEMPERATURE(HIGH): {{data.main.temp_max}} °F</li>
+    <li class="list-group-item list-group-item-action">STATUS: {{data.weather[0].description}}</li>
+</div>

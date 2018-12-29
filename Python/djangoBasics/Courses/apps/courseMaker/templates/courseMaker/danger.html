@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Creation Center</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #3C6478;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: black;
+}
+.course{
+    color: white;
+}
+
+.table{
+    margin-top: 25px;
+}
+.table td{
+    color: white;
+}
+.table .userStuff{
+    background-color: #3C6478;
+}
+.btn-primary{
+    margin-top: 50px;
+}
+#red{
+    background-color: red;
+}
+    </style>
+
+</head>
+
+<body>
+    <h1 class="course">Are you sure you want to delete this course?!?</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{course.id}}</td>
+                <td><a class="userStuff">{{course.name}}</a></td>
+                <td>{{course.desc}}</td>
+                <td>{{course.created_at}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a id="red" class="btn btn-lg btn-primary btn-block" href="/delete/{{course.id}}">Delete</a>
+    <a class="btn btn-lg btn-primary btn-block" href="/">Go back</a>
+</body>
+
+</html>

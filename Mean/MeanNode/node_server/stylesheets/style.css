@@ -1,0 +1,8 @@
+p{
+    font-size: 25pt;
+    text-align: center;
+    color: blue;
+}
+p:hover{
+    cursor: pointer;
+}

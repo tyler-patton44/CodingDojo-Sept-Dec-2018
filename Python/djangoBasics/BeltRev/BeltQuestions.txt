@@ -1,0 +1,129 @@
+1.)
+What is the flow of information in a typical request, 
+from when we type an address on our browser, to when we receive the response on our browser?
+( It sends information from the frontend to the server side that connects and filters the data
+from the database. The server side then send the frontend a response. )
+2.)
+What is MVC, OOP and procedural programming? Why would we use each?
+( MVC stands for Model View Controller, model for the database, 
+View to send correct info to the frontend, and 
+controller to handel the urls and what view function should handle it. )
+(OOP stand for Object Oriented Programming, OOP uses objects to work together to manipulate data. )
+( Procedural Programming uses models and procedures that handle data seperatley 
+unliked OOP where they are handled together. )
+3.)
+What is jQuery and why do we use it?
+( jQuery is not its own language but it is a version of Javascript that in my opinion is written better. 
+It interactes with the html and allowing you to handle certain events and make animations. )
+4.)
+Consider a database with the following tables: users, friendships,
+where users includes id, name, and email, and friendships includes id, user_id,
+friend_id; If our friendships table includes a single association to confirm a friendship 
+between two users, what is the QUERY to pull all of your non-friends?
+( SELECT name from name 
+OUTER JOIN friendships on users.id = friendships.user_id and friendship.friend_id
+WHERE friendship.user_id is NULL ) not sure my mySQL Workbench server will not start so i cannot perform this query.
+5.)
+What are some ways to make your website uniform across multiple browsers?
+( Change the default css. )
+6.)
+What are the differences between submitting a form via method="post" vs method="get"?
+( The post method hides the request while the get method shows it. )
+7.)
+What are the advantages/disadvantages of sending data to the server in the url vs making a post request?
+( If it is sensitive information it is best to hide it so no one can steal it. )
+8.)
+Why should we never render a page on a post request.
+( If they reloaded the page the request would be sent again. )
+9.)
+You notice that when you click submit on a form, your app breaks. 
+Describe how you would approach debugging this problem.
+( I would start by checking the error message if i do not get any information from that
+i would look at where if the action is going to the correct place, then check the input, etc names
+see if that is correct in my method and then i would check what the method is doing and see if 
+that is valid. )
+10.)
+What are a couple security threats and how do we defend against them?
+( Someone could SQL inject you and get all you users info or delete everything, in flask you have to use
+%()s to validate the data but in django you are automatically protects unless you use the raw queries.
+Someone could also change what info is being sent with the inspect element tool so you should never have
+sensitive information being through forms such as price, etc. )
+11.)
+What is the difference between Session, Post, and Cookies?
+( Session is information saved for a short period of time, Post sends information from the client side 
+to the server side, Cookies are like session but they stay until they are deleted. )
+12.)
+Explain why and when we use session.
+( We use session to personalize the experience. We use session when the user signs in so we can display
+there stuff and things they do will be done just for them. )
+13.)
+What is an ORM and why do we use it?  What are its advantages and also its disadvantages.
+( ORM is Object Relational Mapping we use it so we do not have to use SQL.
+The advantages are that it is in your language over choice, you do not have to write SQL queries,
+and everything is in the same place.
+The disadvantage is that the performance is not as good as SQL. )
+
+14.)
+In your models, you may make a class User with the following code: class User(models.Model): 
+Why do we have models.Model inside the parentheses?
+( To specify that it is a model so it knows what the code is for. )
+15.)
+In your models, you may make a class UserManager with the following code:
+class UserManager(models.Manager): Why do we have models.Manager inside the parentheses?
+( To specify what is going on inside and the purpose for the code. )
+16.)
+What is self and why does it appear in methods that we define in a class?
+( It is a way to reference the model you are in currently. )
+17.)
+What is the __init__ method in a class?
+( It is the constructor method. )
+18.)
+Name 2 HTTP Verbs and when would we use each
+( Post, Get, and Delete )
+19.)
+What is RegEx and what do we use it for?
+( ReGex is a regular expression to match patterns. )
+20.)
+On large web applications, what are the benefits of using a framework?
+( They provide stucture which is very helpful when you start adding more functionalities. )
+21.)
+What does a templating engine do for us?
+( It allows you to add variables to HTML without sending everything in using string concatenation. )
+22.)
+What are 3 different type of database table relationships?
+( One to One, One to Many, and Many to Many )
+23.)
+Why do we use routes and how do they work?
+( We use routes to specify what a url send backs to the client side. )
+24.)
+What is a virtual environment and why do we use it?
+( It is a way to seperate different projects that are written in different languages. )
+25.)
+Explain what this code does: “from flask import Flask”.
+( It imports the flask library from the flask file on your computer. )
+26.)
+What is the importance of normalizing your database?
+( It is allows you to group data. )
+27.)
+What is an API?
+( API stand for Application Programming Interface, which allows aplications to communicate with other
+applications. )
+28.)
+What is AJAX and why do we use it?
+( Is a technique fot creating dynamic web applications. It allows things to load without refreshing
+the page. )
+29.)
+What is the difference between an HTTP request/response and an AJAX request/response?
+( There is no differece besides the information to be loaded automatically. )
+30.)
+What is the difference between client and server validation, and when do we use either or both?
+( client validation does not have to be sent to the server and creates a better user experience,
+while server validation protects you from malicious information sent by the user. )
+31.)
+What are the major differences between Flask and Django?
+( Django comes as a MVC while Flask has to be made into one manually. )
+32.)
+(VB) What are differences between tuples, lists, and dictionaries.
+( List hold data that can be accessed by calling there index and can be manipulated,
+Tuples are like list but the data cannot be manipulated, Dictionaries are like list but the data
+is stored under a specified key name instead of a index value. )

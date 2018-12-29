@@ -1,0 +1,40 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 15px;
+    background-color: rgba(0,0,0,0.8);
+}
+header h1{
+    display: inline-block;
+    color: white;
+}
+header .btn-primary{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 60%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a,p{
+    display: inline-block;
+    font-size: 20pt;
+    margin-left: 3px;
+}
+form{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+form .btn-primary{
+    width: 100%;
+}
+.table .thead-dark{
+    background-color: rgba(255,140,0,0.8);
+    color: white;
+}

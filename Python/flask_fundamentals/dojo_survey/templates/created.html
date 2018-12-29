@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Hello Flask</title>
+    <style>
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: black;
+}
+.table{
+    margin-top: 25px;
+}
+.btn-primary{
+    margin-top: 50px;
+}
+    </style>
+</head>
+<body>
+<h1>Display request.form Info</h1>
+<table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Email</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{session['email']}}</td>
+            <td>{{session['first-name']}}</td>
+            <td>{{session['last-name']}}</td>
+            <td>{{session['password']}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Info:</h2>
+      <p>{{request.form['texta']}}</p>
+<a class="btn btn-lg btn-primary btn-block" href="/danger">Go Back</a>
+</body>
+</html>

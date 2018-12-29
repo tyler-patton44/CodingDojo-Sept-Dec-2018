@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    @{
+        List<customers> allCustomers = Model.customers;
+    }
+    <nav>
+        <h2>TyDye Market</h2>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
+        <a href="/orders">Orders</a>
+        <a href="/customers">Customers</a>
+        <a href="/">Settings</a>
+    </nav>
+    @model IndexView
+    <form action="createCustomer" method="post">
+        <h2>Add a Customer</h2>
+        <div class="form-group">
+            <label asp-for="name"></label>
+            <span asp-validation-for="name"></span>
+            <input type="text" class="form-control" placeholder="Name" asp-for="name">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var cus in allCustomers){
+            <tr>
+                <th>@cus.name</th>
+                <td>@cus.createdAt.ToString("MMM dd yyyy")</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

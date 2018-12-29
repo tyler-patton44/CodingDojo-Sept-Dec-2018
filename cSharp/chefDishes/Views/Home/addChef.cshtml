@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <header>
+    <h1>Chef 'N Dishes</h1>
+    <a class="btn btn-primary" href="/">Home</a>
+    </header>
+    @model chefs
+    <form action="createChef" method="post">
+        <div class="form-group">
+            <label asp-for="firstName"></label>
+            <span asp-validation-for="firstName"></span>
+            <input type="text" class="form-control" placeholder="First Name" asp-for="firstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="lastName"></label>
+            <span asp-validation-for="lastName"></span>
+            <input type="text" class="form-control" placeholder="Last Name" asp-for="lastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="dob"></label>
+            <span asp-validation-for="dob"></span>
+            <input type="date" class="form-control" asp-for="dob">
+        </div>
+        <button type="submit" class="btn btn-primary">Add chef</button>
+    </form>
+
+
+</body>
+</html>

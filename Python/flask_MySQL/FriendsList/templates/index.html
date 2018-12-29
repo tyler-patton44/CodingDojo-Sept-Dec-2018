@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Friends.com</title>
+</head>
+<body>
+    <h1>Friends.com</h1>
+    <h2>FriendsList</h2>
+    <div id="box">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Occupation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(all_friends|length) %}
+                <tr>
+                    <td>{{all_friends[i]['first_name']}}</td>
+                    <td>{{all_friends[i]['last_name']}}</td>
+                    <td>{{all_friends[i]['occupation']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <form id="form1" class="form-signin" action="/create_friend" method="post">
+      <img id="logo" src="{{url_for('static', filename='images/logo1.png')}}" alt='guerrilla'>
+      <h2 class="h3 mb-3 font-weight-normal">Create Friend</h2>
+      <div class="alert alert-{{status}}">{{message}}</div>
+
+      <label for="inputName" class="sr-only">First Name</label>
+      <input type="text" id="inputName" class="form-control" placeholder="First Name" name="first_name" value="{{session['first_name']}}">
+      <label for="inputName" class="sr-only">Last Name</label>
+      <input type="text" id="inputName" class="form-control" placeholder="Last Name" name="last_name" value="{{session['last_name']}}">
+
+      <label for="inputName" class="sr-only">Occupation</label>
+      <input type="text" id="inputName" class="form-control" placeholder="Occupation" name="occupation" value="{{session['occupation']}}">
+
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
+    </form>
+</body>
+</html>

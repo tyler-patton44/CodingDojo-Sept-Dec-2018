@@ -1,0 +1,21 @@
+body{
+    background-color: #3C6478;
+}
+h1{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: black;
+}
+.table{
+    margin-top: 25px;
+}
+.table td{
+    color: white;
+}
+.btn-primary{
+    margin-top: 50px;
+}

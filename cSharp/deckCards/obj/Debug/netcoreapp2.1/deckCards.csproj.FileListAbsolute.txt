@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/bin/Debug/netcoreapp2.1/deckCards.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/bin/Debug/netcoreapp2.1/deckCards.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/bin/Debug/netcoreapp2.1/deckCards.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/bin/Debug/netcoreapp2.1/deckCards.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/bin/Debug/netcoreapp2.1/deckCards.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/deckCards/obj/Debug/netcoreapp2.1/deckCards.pdb

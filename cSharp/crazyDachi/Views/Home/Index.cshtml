@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>DojoDachi</h1>
+    <header>
+    <p>Fullness: @ViewBag.currentDachi.fullness</p>
+    <p>Happiness: @ViewBag.currentDachi.happiness</p>
+    <p>Meals: @ViewBag.currentDachi.meals</p>
+    <p>Energy: @ViewBag.currentDachi.energy</p>
+    </header>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <h3>@ViewBag.currentDachi.status</h3>
+    </div>
+    @if(ViewBag.currentDachi.fullness < 1 || ViewBag.currentDachi.happiness < 1){
+        <form action="update" method="post" style="display:block; margin:0 auto;">
+        <input type="hidden" name="action" value="restart">
+        <button type="submit" class="btn btn-primary">Restart</button>
+    </form>
+    }
+    else if(ViewBag.currentDachi.fullness > 99 && ViewBag.currentDachi.happiness > 99 && ViewBag.currentDachi.energy > 99){
+        <form action="update" method="post" style="display:block; width:80%; margin:0 auto; padding-top:10px;">
+        <input type="hidden" name="action" value="restart">
+        <button type="submit" class="btn btn-primary">Restart</button>
+    </form>
+    }
+    else{
+
+    <form action="update" method="post">
+        <input type="hidden" name="action" value="feed">
+        <button type="submit" class="btn btn-primary">Feed</button>
+    </form>
+    <form action="update" method="post">
+        <input type="hidden" name="action" value="play">
+        <button type="submit" class="btn btn-primary">Play</button>
+    </form>
+    <form action="update" method="post">
+        <input type="hidden" name="action" value="work">
+        <button type="submit" class="btn btn-primary">Work</button>
+    </form>
+    <form action="update" method="post">
+        <input type="hidden" name="action" value="sleep">
+        <button type="submit" class="btn btn-primary">Sleep</button>
+    </form>
+    }
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <header>
+    <h1>Chef 'N Dishes</h1>
+    <a class="btn btn-primary" href="/">Home</a>
+    </header>
+    @model dishes
+    <form action="createDish" method="post">
+        <div class="form-group">
+            <label asp-for="name"></label>
+            <span asp-validation-for="name"></span>
+            <input type="text" class="form-control" placeholder="Dish Name" asp-for="name">
+        </div>
+        <div class="form-group">
+            <label asp-for="calories"></label>
+            <span asp-validation-for="calories"></span>
+            <input type="number" class="form-control" placeholder="# of Calories" asp-for="calories">
+        </div>
+        <div class="form-group">
+            <label asp-for="tastiness"></label>
+            <span asp-validation-for="tastiness"></span>
+            <select class="form-control" asp-for="tastiness">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="chefId">Chef:</label>
+            <span asp-validation-for="chefId"></span>
+            <select class="form-control" asp-for="chefId">
+            @foreach(var x in ViewBag.AllChefs){
+            <option value="@x.chefId">@x.firstName @x.lastName</option>
+            }
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="description"></label>
+            <span asp-validation-for="description"></span>
+            <textarea class="form-control" rows="3" placeholder="Description..." asp-for="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add dish</button>
+    </form>
+
+
+</body>
+</html>

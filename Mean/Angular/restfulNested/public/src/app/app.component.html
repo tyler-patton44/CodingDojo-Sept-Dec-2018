@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="container">
+    <div class="top" *ngIf='tasks.length > 0'>
+        <h2>All Tasks:</h2>
+        <div *ngFor = 'let t of tasks'>
+            <p>{{ t.name }}  {{ t.animal }}</p>
+            <p>{{ t._id }}</p>
+            <button (click) = "onEdit(t)">Edit</button>
+            <button (click) = "onDelete(t)" class="delete">Delete</button>
+        </div>
+    </div>
+    <div class="forms">
+        <form (submit) = "onSubmit()">
+            <h2>Create Task</h2>
+            <p>{{newTask | json}}</p>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Task Name:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="newTask.name" [(ngModel)]="newTask.name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Task Animal:</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Animal" name="newTask.animal"[(ngModel)]="newTask.animal">
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
+        <div *ngIf = 'showForm'>
+            <form class="form2" (submit) = "onEditForm()">
+                <h2>Edit Task</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Task Name:</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name" name="editTask.name" [(ngModel)]="editTask.name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Task Animal:</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Animal" name="editTask.animal"[(ngModel)]="editTask.animal">
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+    </div>  
+</div>
+<app-task></app-task>

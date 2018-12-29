@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <header>
+    <h1>CRUDelicious</h1>
+    </header>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Welcome to CRUDelicious</h1>
+        <a class="btn btn-primary" href="/create">Add a dish</a>
+        <p class="lead">Check out some recent dishes</p>
+    </div>
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            @foreach(var food in ViewBag.allDishes){
+            <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">@food.Name</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>Made By: @food.Chef</li>
+                <li>Posted at @food.CreatedAt.ToString("hh:mm tt MMM dd, yyyy")</li>
+                </ul>
+                <a class="btn btn-primary" href="/@food.DishesId">View</a>
+            </div>
+            </div>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

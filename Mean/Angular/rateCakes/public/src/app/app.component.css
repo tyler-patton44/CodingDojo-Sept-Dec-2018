@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.btn{
+    width: 100%;
+}
+.form1{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+.top{
+    display: inline-block;
+    width: 40%;
+    margin-left: 2%;
+}
+.top span{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-top: 20px;
+}
+.top span:first-child{
+    margin-top: 0;
+}
+.form2{
+    display: block;
+    width: 100%
+}
+span img{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+}
+.divider{
+    height: 50px;
+}

@@ -1,0 +1,42 @@
+*{
+  margin: 1%;
+  padding: 0;
+}
+h1{
+  width: 99%;
+  padding: 35px 0;
+  padding-left: 1%;
+  background-color: grey;
+}
+p:nth-of-type(1){
+  width: 97%;
+  font-size: 22px;
+  padding-top: 3%;
+  padding-bottom: 8%;
+  padding-left: 3%;
+  background-color: green;
+}
+p:nth-of-type(2){
+  vertical-align: top;
+  font-size: 22px;
+  width: 98%;
+  padding: 40px 0;
+  padding-left: 2%;
+  background-color: orange; 
+}
+@media only screen and (min-width: 485px) {
+  p:nth-of-type(1){
+    padding-bottom: 28%;
+  }
+  p:nth-of-type(2) span{
+    content: 'Greater than 485';
+  }
+  } 
+  @media only screen and (min-width: 1023px) {
+    p:nth-of-type(1){
+      padding-bottom: 18%;
+    }
+    p:nth-of-type(2) span{
+      content: 'Greater than 485';
+    }
+    } 

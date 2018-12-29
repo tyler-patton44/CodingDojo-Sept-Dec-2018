@@ -1,0 +1,38 @@
+Last login: Tue Sep 25 12:13:44 on ttys000
+Tylers-MacBook-Pro:~ tylerpatton$ cd /Users/tylerpatton/Desktop/MyStuff/CodingDojo/WebFund/test/index2.html 
+-bash: cd: /Users/tylerpatton/Desktop/MyStuff/CodingDojo/WebFund/test/index2.html: Not a directory
+Tylers-MacBook-Pro:~ tylerpatton$ cd Desktop
+Tylers-MacBook-Pro:Desktop tylerpatton$ cd MyStuff
+Tylers-MacBook-Pro:MyStuff tylerpatton$ cd WebFund
+-bash: cd: WebFund: No such file or directory
+Tylers-MacBook-Pro:MyStuff tylerpatton$ cd CodingDojo
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ cd WebFund
+Tylers-MacBook-Pro:WebFund tylerpatton$ cd test
+Tylers-MacBook-Pro:test tylerpatton$ mv index2.html ../../Destination
+Tylers-MacBook-Pro:test tylerpatton$ touch styles.css
+Tylers-MacBook-Pro:test tylerpatton$ rm styles.css
+Tylers-MacBook-Pro:test tylerpatton$ cd ..
+Tylers-MacBook-Pro:WebFund tylerpatton$ cd ..
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ ls
+Destination	WebFund
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ cd Destination
+Tylers-MacBook-Pro:Destination tylerpatton$ rm -rf Destination
+Tylers-MacBook-Pro:Destination tylerpatton$ rmdir Destination
+rmdir: Destination: No such file or directory
+Tylers-MacBook-Pro:Destination tylerpatton$ rm -R Destination
+rm: Destination: No such file or directory
+Tylers-MacBook-Pro:Destination tylerpatton$ rm -rf
+Tylers-MacBook-Pro:Destination tylerpatton$ sudo rm Destination
+Password:
+rm: Destination: No such file or directory
+Tylers-MacBook-Pro:Destination tylerpatton$ ls
+index2.html
+Tylers-MacBook-Pro:Destination tylerpatton$ cd .. 
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ rmdir Destionation
+rmdir: Destionation: No such file or directory
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ rmdir Destination
+rmdir: Destination: Directory not empty
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ rm -r ./Destination
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ ls
+WebFund
+Tylers-MacBook-Pro:CodingDojo tylerpatton$ 

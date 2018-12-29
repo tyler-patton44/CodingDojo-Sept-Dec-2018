@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.left-side{
+    vertical-align: top;
+    height: 600px;
+    width: 45%;
+    display: inline-block;
+    border-right: 5px solid black;
+}
+.right-side{
+    height: 600px;
+    width: 45%;
+    display: inline-block;
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+form{
+    display: inline;
+}
+input{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+a{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+}
+a:hover{
+    color: white;
+}

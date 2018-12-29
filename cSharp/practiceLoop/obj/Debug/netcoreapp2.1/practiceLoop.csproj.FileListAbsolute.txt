@@ -1,0 +1,11 @@
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/bin/Debug/netcoreapp2.1/practiceLoop.deps.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/bin/Debug/netcoreapp2.1/practiceLoop.runtimeconfig.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/bin/Debug/netcoreapp2.1/practiceLoop.runtimeconfig.dev.json
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/bin/Debug/netcoreapp2.1/practiceLoop.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/bin/Debug/netcoreapp2.1/practiceLoop.pdb
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.csprojAssemblyReference.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.csproj.CoreCompileInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.AssemblyInfoInputs.cache
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.AssemblyInfo.cs
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.dll
+/Users/tylerpatton/Desktop/MyStuff/CodingDojo/cSharp/practiceLoop/obj/Debug/netcoreapp2.1/practiceLoop.pdb

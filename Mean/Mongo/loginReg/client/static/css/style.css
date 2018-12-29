@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgba(0,100,255,0.3);
+}
+h6{
+    color: red;
+}
+nav{
+    padding: 12px;
+    background-color: rgba(0,0,0,0.8);
+}
+nav h1{
+    display: inline-block;
+    color: white;
+}
+.containment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+form{
+    display: inline-block;
+    width: 40%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.5);
+}
+form:nth-of-type(2){
+    margin-left: 10%;
+    vertical-align: top;
+}
+form h2{
+    opacity: 0.8;
+}

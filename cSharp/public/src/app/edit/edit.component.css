@@ -1,0 +1,18 @@
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+form h2{
+    text-align: center;
+}
+.form-group{
+    text-align: left;
+}
+form .btn.btn-primary{
+    width: 80%;
+}
+form p{
+    padding: 12px;
+    background-color: rgba(240,0,0,0.5);
+    color: white;
+}

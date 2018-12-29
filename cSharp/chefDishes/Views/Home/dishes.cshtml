@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <header>
+    <h1>Chef 'N Dishes</h1>
+    <a class="btn btn-primary" href="/addDish">Add a dish</a>
+    </header>
+    <nav>
+        <a href="/">Chef</a>
+        <p> | </p>
+        <a href="/dishes">Dishes</a>
+    </nav>
+    @model dishes
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Chef</th>
+                <th scope="col">Tastiness</th>
+                <th scope="col">Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var x in ViewBag.AllDishes){
+            <tr>
+                <th>@x.name</th>
+                <td>@x.chef.firstName</td>
+                <td>@x.tastiness</td>
+                <td>@x.calories</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>
+</html>

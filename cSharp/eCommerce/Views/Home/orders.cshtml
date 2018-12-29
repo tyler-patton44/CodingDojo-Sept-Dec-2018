@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    @{
+        List<customers> allCustomers = Model.customers;
+        List<products> allProd = Model.products;
+    }
+    <nav>
+        <h2>TyDye Market</h2>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
+        <a href="/orders">Orders</a>
+        <a href="/customers">Customers</a>
+        <a href="/">Settings</a>
+    </nav>
+    @model IndexView
+    <form action="createOrder" method="post">
+        <h2>Make an Order</h2>
+        <div class="form-group">
+            <label asp-for="order.customerId"></label>
+            <span asp-validation-for="order.customerId"></span>
+            <select class="form-control" asp-for="order.customerId">
+                @foreach(var cus in allCustomers){
+                <option value="@cus.customerId">@cus.name</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="order.quanity"></label>
+            <span asp-validation-for="order.quanity"></span>
+            <select class="form-control" asp-for="order.quanity">
+                <option>1</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="order.productId"></label>
+            <span asp-validation-for="order.productId"></span>
+            <select class="form-control" asp-for="order.productId">
+                <option>1</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Product</th>
+                <th scope="col">Quanity</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>tyler</th>
+                <td>gang</td>
+                <td>affiliate</td>
+                <td>Today</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

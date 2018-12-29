@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Move Em</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <form action="/formInfo" method="POST">
+        <h2>Create Cat</h2>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput2">Breed:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Breed" name="breed">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: block;
+    padding: 12px;
+    background-color: rgba(0,0,0,0.8);
+}
+nav a,h2{
+    display: inline-block;
+    font-size: 28pt;
+    color: white;
+}
+nav h2{
+    margin-right: 10%;
+}
+nav a{
+    margin-top: 12px;
+    font-size: 15pt;
+    margin-left: 20px;
+}
+nav a:hover{
+    color: gold;
+    text-decoration: none;
+}
+.main-content{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+form{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+}
+form h2{
+    color: black;
+}
+.container{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+div.card.mb-4{
+    display: inline-block;
+    width: 18%;
+    margin-left: 2%;
+}
+span{
+    color: red;
+}

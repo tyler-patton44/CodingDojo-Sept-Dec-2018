@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bomb Squad</title>
+    <script src="jquery.js"></script>
+    <style>
+#clicker{
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+#clicker:hover{
+    background-color: rgba(0,0,0,0.6);
+    cursor: crosshair;
+}
+li:hover{
+    color: lightblue;
+    cursor: pointer;
+}
+#incorrect{
+    display: block;
+    margin: 0 auto;
+}
+#results{
+    display: none;
+    text-align: center;
+    font-size: 15pt;
+}
+
+#clicker2{
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+#clicker2:hover{
+    background-color: rgba(0,0,0,0.6);
+    cursor: crosshair;
+}
+
+#incorrect2{
+    display: block;
+    margin: 0 auto;
+}
+#results2{
+    display: none;
+    text-align: center;
+    font-size: 15pt;
+}
+    </style>
+</head>
+<body>
+    <h1></h1>
+<div id="clicker">
+    <p id="points">100</p>
+    <p style="display:none;" id="question"></p>
+    <ul style="display:none; text-align:left;" id="incorrect">
+
+    </ul>
+</div>
+<p id="results"></p>
+
+<div id="clicker2">
+        <p id="points2">200</p>
+        <p style="display:none;" id="question2"></p>
+        <ul style="display:none; text-align:left;" id="incorrect2">
+    
+        </ul>
+    </div>
+    <p id="results2"></p>
+<script src="script.js"></script>
+</body>
+</html>

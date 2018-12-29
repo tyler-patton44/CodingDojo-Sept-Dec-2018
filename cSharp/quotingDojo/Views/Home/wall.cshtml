@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/style2.css"/>
+</head>
+<body>
+    <nav>
+    <h1>Quote This</h1>
+    <a class="btn btn-primary" href="/">Add quote</a>
+    </nav>
+    @foreach(var qoto in ViewBag.allInfo){
+        <div>
+        <h4>"@qoto["content"]"</h4>
+        <p>-  @qoto["name"] at @qoto["created_at"].ToString("hh:mm tt MMM dd, yyyy")</p>
+        </div>
+    }
+
+
+</body>
+</html>

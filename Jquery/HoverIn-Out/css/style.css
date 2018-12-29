@@ -1,0 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	display: block;
+	margin-left: 40%;
+	margin-bottom: 3px;
+}

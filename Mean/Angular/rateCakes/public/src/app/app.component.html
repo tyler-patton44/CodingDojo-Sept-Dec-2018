@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container">
+    <form class="form1" (submit) = "onSubmit()">
+        <h2>Submit Cake</h2>
+        <p>{{newTask | json}}</p>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Cake Baker:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Baker" name="newTask.baker" [(ngModel)]="newTask.baker">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Cake Image (URL):</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Image Url" name="newTask.image"[(ngModel)]="newTask.image">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <div class="top" *ngIf='tasks.length > 0'>
+        <h2>Cakes:</h2>
+        <div *ngFor = 'let t of tasks'>
+            <span>
+                <p>Baker: {{ t.baker }}</p>
+                <img (click) = "oneTask(t._id)" src="{{t.image}}" alt="cake">
+            </span>
+            <span style="margin-left: 2%;">
+                <form class="form2" (submit) = "comSubmit(t._id)">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Rate:</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="taskCom.ratings" [(ngModel)]="taskCom.ratings">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Comment:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="taskCom.comment" [(ngModel)]="taskCom.comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </span>
+        </div>
+    </div>
+<div class="divider"></div>
+<app-task *ngIf="task" [tasktoShow]='task'></app-task>
+</div>  

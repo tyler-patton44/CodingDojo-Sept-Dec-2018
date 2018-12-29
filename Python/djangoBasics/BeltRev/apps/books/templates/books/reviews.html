@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Bookly</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'books/style2.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <strong>Bookly</strong>
+        <a class="actions" href="/books">View Books</a>
+        <a class="actions" href="/books/logout">Logout</a>
+    </nav>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li class="{{message.tag}}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>{{writtings.title}}</h1>
+            <p class="lead">Description: {{writtings.desc}}</p>
+        </div>
+    </main>
+    <form action="/books/review_book" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="hidden" name="bookid" value="{{writtings.id}}">
+            <label for="exampleFormControlTextarea1">Write Review</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc">{{request.session.desc}}</textarea>
+            <label for="exampleFormControlSelect1">Rate</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="rating">
+                <option value="0">0</option>
+                <option value="0.5">0.5</option>
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="3.5">3.5</option>
+                <option value="4">4</option>
+                <option value="4.5">4.5</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit review</button>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Review</th>
+                <th scope="col">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for review in reviews reversed%}
+            <tr>
+                <th scope="row">{{review.user.first_name}}</th>
+                <td>{{review.content}}</td>
+                <td><span class="stars" data-stars="{{review.rating}}">xxxxx</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

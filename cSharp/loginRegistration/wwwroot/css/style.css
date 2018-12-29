@@ -1,0 +1,29 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 15px;
+    background-color: rgba(0,0,0,0.8);
+}
+header h1{
+    display: inline-block;
+    color: white;
+}
+header .btn-primary{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 60%;
+}
+form{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+form .btn-primary{
+    width: 100%;
+}
+span{
+    color: red;
+}
